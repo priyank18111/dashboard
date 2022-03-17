@@ -20,13 +20,11 @@
        android:textStyle="bold" 
         android:textColor="@android:color/black"
         android:id="@+id/dashboard"
-     
-       
        android:textSize="@dimen/size40sp"
         />
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/size10dp"
+        android:layout_marginTop="@dimen/size7dp"
          android:layout_alignRight="@+id/dashboard"
             android:layout_alignParentRight="true"
         
@@ -38,12 +36,12 @@
        />
    </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dashboard"
         android:backgroundTint="@color/darkblue"
-        android:layout_marginTop="@dimen/size25dp"
+        android:layout_marginTop="@dimen/size20dp"
      
         app:cardCornerRadius="@dimen/size15dp"
       
@@ -92,7 +90,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_statistics"
-                android:contentDescription="description" />
+                />
            <ProgressBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -145,7 +143,7 @@
             
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 <TextView
     android:layout_width="wrap_content"
         android:layout_below="@+id/dashboardcard1"
@@ -166,7 +164,7 @@
         android:layout_marginTop="@dimen/size30dp"
         android:layout_height="wrap_content"/>
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_below="@+id/dailyspend"
             android:layout_height="wrap_content"
@@ -186,7 +184,7 @@
                     android:layout_width="@dimen/size38dp"
                     android:layout_height="@dimen/size40dp"
                     android:id="@+id/bankcard"
-                    android:backgroundTint="#ff5e5b"
+                    android:backgroundTint="@color/colorLightRed"
                     app:cardCornerRadius="@dimen/size10dp"
            
     >
@@ -233,7 +231,7 @@
                     android:id="@+id/foodcard"
                        android:layout_marginTop="@dimen/size10dp"
                     android:layout_below="@+id/bankcard"
-                    android:backgroundTint="#FBB41B"
+                    android:backgroundTint="@color/colorLightYellow"
                     app:cardCornerRadius="@dimen/size10dp"
            
     >
@@ -281,7 +279,7 @@
                     android:id="@+id/dresscard"
                        android:layout_marginTop="@dimen/size10dp"
                     android:layout_below="@+id/foodcard"
-                    android:backgroundTint="#2AC999"
+                    android:backgroundTint="@color/colorLightGreen"
                     app:cardCornerRadius="@dimen/size10dp">
            
   <ImageView
@@ -326,7 +324,7 @@
                     android:text="@string/clothdate"
                     />
             </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
         <TextView
     android:layout_width="wrap_content"
         android:layout_below="@+id/dailyspendcard"
@@ -350,7 +348,7 @@
     
          <HorizontalScrollView
          android:layout_below="@+id/dashlayout"
-            android:layout_marginTop="@dimen/size10dp"
+            android:layout_marginTop="@dimen/size5dp"
         android:layout_width="match_parent"
         android:layout_marginLeft="@dimen/size15dp"
             android:scrollbars="none"
@@ -444,7 +442,8 @@
                             android:textColor="@android:color/white"
                        android:layout_gravity="center"
                         /></LinearLayout>
-                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
                     android:layout_width="@dimen/size70dp"
                     android:layout_height="@dimen/size70dp"
                     android:id="@+id/moneycard"
@@ -472,7 +471,8 @@
                             android:textColor="@android:color/white"
                        android:layout_gravity="center"
                         /></LinearLayout>
-                </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
                     android:layout_width="@dimen/size70dp"
                     android:layout_height="@dimen/size70dp"
                     android:layout_marginLeft="@dimen/size10dp"
@@ -534,7 +534,8 @@
     <com.google.android.material.bottomappbar.BottomAppBar
        android:id="@+id/bottomAppBar"
        android:layout_width="match_parent"
-       android:layout_height="84dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+       android:layout_height="@dimen/size84dp"
        android:background="@drawable/shape_rect"
        android:layout_alignParentBottom="true"
       android:layout_alignParentEnd="true">
@@ -544,27 +545,25 @@
             
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/size70dp"
         app:menu="@menu/navigation"
         app:itemIconTint="@drawable/icon_selector"/>
 
      </com.google.android.material.bottomappbar.BottomAppBar>
-    
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="@dimen/size56dp"
+            android:layout_height="@dimen/size56dp"
             android:id="@+id/floatingActionButtonAdd"
             android:src="@drawable/ic_add"
-            app:fabCradleRoundedCornerRadius="2dp"
+            app:fabCradleRoundedCornerRadius="@dimen/size2dp"
             app:layout_anchor="@+id/bottomAppBar"
         android:layout_alignParentEnd="true"
-     
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="165dp"
+        android:layout_marginRight="@dimen/size165dp"
           
-            android:layout_marginBottom="40dp"/>
+            android:layout_marginBottom="@dimen/size40dp"/>
 
        
    
